@@ -1,38 +1,162 @@
+:root {
+  --ng-blue: #0072CE;
+  --ng-green: #78BE20;
+  --ng-red: #DA291C;
+  --ng-yellow: #FFD100;
+}
+
+body {
+  margin: 0;
+  background-color: #001c48;
+  font-family: Arial, sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background-color: #001c48; /* dark blue */
   min-height: 100vh;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* soft shadow */
+}
+
+h1 {
+  color: var(--ng-blue);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  color: var(--ng-blue);
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--ng-green);
+  margin-top: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.2rem;
+}
+
+.step-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.05); /* translucent card style */
+  padding: 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.step-text {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.step-text input[type="checkbox"]:checked + span {
+  color: var(--ng-green);
+  font-weight: bold;
+}
+
+button.info-btn {
+  min-width: 60px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  background-color: var(--ng-yellow);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button.info-btn:hover {
+  background-color: #f7c800;
+  transform: scale(1.05);
+}
+
+.info-box {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #003366;
+  color: #fff;
+  max-width: 100%;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:disabled {
+  background-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(.info-btn):not(:disabled) {
+  background-color: var(--ng-green);
+  color: #fff;
+  border: none;
+}
+
+button:not(.info-btn):not(:disabled):hover {
+  background-color: #66aa1a;
+  transform: scale(1.03);
+}
+
+button.info-btn.remove-btn {
+  background-color: var(--ng-red);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.info-btn.remove-btn:hover {
+  background-color: #b71c10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overdue span {
+  color: var(--ng-red);
+  font-weight: bold;
+}
+
+.fab-add {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--ng-blue);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.fab-add:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
 }
