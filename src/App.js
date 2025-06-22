@@ -32,12 +32,135 @@ const allProjects = [
         { id: 4, text: 'Safety check', completed: false, info: 'Verify electrical safety and system grounding.' }
       ]
     }
-  }
+  },
+
+  {
+    id: 3,
+    name: 'HVAC Commissioning',
+    dueDate: '2025-07-20',
+    location: 'Building C – Utility Room',
+    procedure: {
+      title: 'HVAC Start-Up and Commissioning',
+      steps: [
+        { id: 1, text: 'Verify equipment model and serial number', completed: false, info: 'Cross-check installed unit with project specs.' },
+        { id: 2, text: 'Inspect ductwork connections', completed: false, info: 'Ensure sealed and insulated per design.' },
+        { id: 3, text: 'Power on unit', completed: false, info: 'Check voltage and current draw.' },
+        { id: 4, text: 'Test temperature differential', completed: false, info: 'Measure inlet vs outlet temperature (cooling/heating).' },
+        { id: 5, text: 'Submit commissioning report', completed: false, info: 'Attach test results and observations.' }
+      ]
+    }
+  },
+
+  {
+    id: 4,
+    name: 'Backup Generator Installation',
+    dueDate: '2025-07-28',
+    location: 'Outdoor Compound – North Yard',
+    procedure: {
+      title: 'Backup Generator Setup',
+      steps: [
+        { id: 1, text: 'Prepare concrete base', completed: false, info: 'Ensure level platform for generator mount.' },
+        { id: 2, text: 'Position generator', completed: false, info: 'Use crane or lift to place accurately.' },
+        { id: 3, text: 'Connect fuel line', completed: false, info: 'Check for leaks, pressure test if needed.' },
+        { id: 4, text: 'Wire to transfer switch', completed: false, info: 'Follow NEC code guidelines.' },
+        { id: 5, text: 'Test run generator', completed: false, info: 'Observe load response and sound levels.' }
+      ]
+    }
+  },
+
+  {
+    id: 5,
+    name: 'Lighting System QA',
+    dueDate: '2025-08-05',
+    location: 'Office Floor – Level 2',
+    procedure: {
+      title: 'Final Lighting Installation QA',
+      steps: [
+        { id: 1, text: 'Check fixture alignment', completed: false, info: 'Ensure all lights are centered and level.' },
+        { id: 2, text: 'Verify bulb type and wattage', completed: false, info: 'Match spec sheet requirements.' },
+        { id: 3, text: 'Check switch functionality', completed: false, info: 'All zones must operate correctly.' },
+        { id: 4, text: 'Inspect dimming capability', completed: false, info: 'Dimmers should operate smoothly.' },
+        { id: 5, text: 'Capture before/after photos', completed: false, info: 'Document installation status for approval.' }
+      ]
+    }
+  },
+
+  {
+    id: 6,
+    name: 'Overhead Power Line Installation',
+    dueDate: '2025-08-10',
+    location: 'Zone 4 – Utility Corridor',
+    procedure: {
+      title: 'Power Line Setup',
+      steps: [
+        { id: 1, text: 'Mark utility poles location', completed: false, info: 'Ensure pole spacing aligns with local code.' },
+        { id: 2, text: 'Install utility poles', completed: false, info: 'Use crane to plant poles securely with concrete.' },
+        { id: 3, text: 'String conductors', completed: false, info: 'Install wire with sag tension and clearance specs.' },
+        { id: 4, text: 'Install insulators and crossarms', completed: false, info: 'Mount securely to prevent arcing or failure.' },
+        { id: 5, text: 'Grounding and lightning protection', completed: false, info: 'Attach grounding rods and surge protectors.' },
+        { id: 6, text: 'Perform high-voltage safety test', completed: false, info: 'Verify insulation resistance and continuity.' }
+      ]
+    }
+  },
+
+  {
+    id: 7,
+    name: 'Smart Meter Deployment',
+    dueDate: '2025-08-15',
+    location: 'Residential Block – Area 5',
+    procedure: {
+      title: 'Smart Meter Installation',
+      steps: [
+        { id: 1, text: 'Deactivate existing meter', completed: false, info: 'Notify customer and shut down safely.' },
+        { id: 2, text: 'Remove old meter', completed: false, info: 'Inspect panel and remove device safely.' },
+        { id: 3, text: 'Install new smart meter', completed: false, info: 'Mount according to utility standards.' },
+        { id: 4, text: 'Connect to data network', completed: false, info: 'Ensure meter syncs with grid system.' },
+        { id: 5, text: 'Test data transmission', completed: false, info: 'Confirm usage data uploads successfully.' }
+      ]
+    }
+  },
+
+  {
+    id: 8,
+    name: 'Electrical Panel Upgrade',
+    dueDate: '2025-08-20',
+    location: 'Building B – Main Room',
+    procedure: {
+      title: 'Panel Swap & Load Testing',
+      steps: [
+        { id: 1, text: 'Turn off main breaker', completed: false, info: 'Ensure full de-energization before panel access.' },
+        { id: 2, text: 'Label all circuits', completed: false, info: 'Mark each line clearly before disconnecting.' },
+        { id: 3, text: 'Remove old panel', completed: false, info: 'Unscrew and carefully disconnect wiring.' },
+        { id: 4, text: 'Install new panel', completed: false, info: 'Securely fit and bolt down.' },
+        { id: 5, text: 'Reconnect circuits & test load', completed: false, info: 'Ensure proper voltage and breaker response.' }
+      ]
+    }
+  },
+
+  {
+    id: 9,
+    name: 'Transformer Inspection',
+    dueDate: '2025-08-25',
+    location: 'Substation Delta',
+    procedure: {
+      title: 'Mid-Year Transformer Check',
+      steps: [
+        { id: 1, text: 'Check oil levels', completed: false, info: 'Inspect and top off dielectric fluid if needed.' },
+        { id: 2, text: 'Inspect bushings', completed: false, info: 'Look for cracks or signs of discharge.' },
+        { id: 3, text: 'Test winding resistance', completed: false, info: 'Verify balance and temperature rise.' },
+        { id: 4, text: 'Clean air intake filters', completed: false, info: 'Remove dust buildup from fans or vents.' },
+        { id: 5, text: 'Log performance readings', completed: false, info: 'Document voltage, current, and temperature.' }
+      ]
+    }
+  },
+
+
 ];
 
+
 function App() {
-  const [projects, setProjects] = useState([allProjects[0]]); // user's claimed projects
-  const [availableProjects, setAvailableProjects] = useState([allProjects[1]]); // unclaimed
+  const [projects, setProjects] = useState([allProjects[0]]); // Claimed projects (you can set any number)
+  const [availableProjects, setAvailableProjects] = useState(allProjects);
   const [selectedProject, setSelectedProject] = useState(null);
   const [openInfoStepId, setOpenInfoStepId] = useState(null);
   const [showAddProjects, setShowAddProjects] = useState(false); // toggles add view
